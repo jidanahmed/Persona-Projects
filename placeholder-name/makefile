@@ -2,9 +2,9 @@
 run : main
 	@./main
 compile main: main.o
-	@gcc -o main main.o
+	@gcc -o main main.o -lncurses
 main.o: main.c
-	@gcc -c main.c
+	@gcc -c main.c 
 clean:
 	@rm -f *.o main
 
